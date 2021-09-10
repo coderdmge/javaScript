@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 对象属于一种复合数据类型的数据，在对象中可以保存多个不同数据类型的属性
+			 * 对象的分类
+			 * 	1.内建对象
+			 * 		由ES标准中定义的对象，在任何ES实现中都可以使用
+			 * 		比如 Math String Number Boolean Function Object
+			 * 	2.宿主对象
+			 * 		由js运行环境提供的对象，目前来讲主要指由浏览器提供的对象
+			 * 		比如 BOM DOM
+			 * 3.自定义对象
+			 * 		由开发人员自己创建的对象
+			 * 
+			 */
+			/*
+			 * 创建对象
+			 * var obj=new Object()
+			 * 如果读对象没有的属性，不会报错而是会返回undefined
+			 * 删除对象的属性
+			 * 语法 delete 对象.属性名
+			 */
+			var obj=new Object()
+				obj.name="tom"
+				console.log(obj.name)
+				delete obj.name;
+				console.log(obj.name)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

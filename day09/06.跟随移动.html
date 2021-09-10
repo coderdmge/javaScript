@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1 = document.getElementById("box1");
+				document.onmousemove=function(event){
+					event=event||window.event
+					/*
+					 * 获取滚动条滚动的距离
+					 * Chrome认为浏览器的滚动条是body的，可以通过body.scrollTop来获取
+					 * 火狐等浏览器认为浏览器的滚动条是html的
+					 */
+					var st=document.documentElement.scrollTop
+					var sl=document.documentElement.scrollLeft
+					console.log(st)
+					var left=event.clientX
+					var top=event.clientY
+					box1.style.left=left+sl+"px"
+					box1.style.top=top+st+"px"
+				}
+				var box2=document.getElementById("box2")
+					box2.onmousemove=function(evevt){
+						event.cancelBubble=true
+					}
+			}
+		</script>
+	</head>
+	<body style="height: 3000px; width: 3000px;">
+		<div id="box1"></div>
+		<div id="box2" style="width: 300px; height: 300px; background-color: orange;"></div>
+	</body>
+	
+</html>

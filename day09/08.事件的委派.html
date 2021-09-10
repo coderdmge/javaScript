@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var ul=document.getElementById("ul")
+				var btn01=document.getElementById("btn01")
+				btn01.onclick=function(){
+					var li=document.createElement("li")
+					li.innerHTML="<a href='javascript:;' class='link'>新建的连接</a>"
+					ul.appendChild(li)
+				}
+				/*
+				 * 事件的委派
+				 * 将事件统一绑定给元素共同的祖先元素，这样后代的元素上的事件触发时，会一直冒泡到祖先元素
+				 * 从而通过祖先元素的响应函数来处理事件
+				 * 事件委派利用了冒泡，通过委派可以减少事件绑定的次数,提高程序的性能
+				 */
+				ul.onclick=function(event){
+					event=event||window.event
+					if(event.target.className=="link"){
+						alert("我是ul的单击响应函数");
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn01">添加超链接</button>
+		
+		<ul id="ul" style="background-color: #bfa;">
+			<li>
+				<p>我是p元素</p>
+			</li>
+			<li><a href="javascript:;" class="link">超链接一</a></li>
+			<li><a href="javascript:;" class="link">超链接二</a></li>
+			<li><a href="javascript:;" class="link">超链接三</a></li>
+		</ul>
+	</body>
+</html>

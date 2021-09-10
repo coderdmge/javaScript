@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+				position: absolute;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var div=document.getElementsByTagName("div")[0]
+				var speed=10;
+				
+				document.onkeydown=function(event){
+					event=event||window.event
+					if(event.ctrlKey){
+						speed=500;
+					}
+					switch(event.keyCode){
+						case 37:
+							div.style.left=div.offsetLeft-speed+"px"
+						break;
+						case 39:
+							div.style.left=div.offsetLeft+speed+"px"
+						break;
+						case 38:
+							div.style.top=div.offsetTop-speed+"px"
+						break;
+						case 40:
+							div.style.top=div.offsetTop+speed+"px"
+						 
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box1"></div>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * && ||非布尔值的情况
+			 * 对于非布尔值进行运算时，
+			 * 	会先将其转换为布尔值，然后在运算，并且返回原值
+			 * --与运算
+			 * 	如果第一个值为true，则必然返回第二值
+			 * 	如果第一个值为false，则直接返回第一个值
+			 * --或运算
+			 * 	--如果第一个值为true，则直接返回第一个值
+			 * 	--如果第一个值false，则直接返回第二个值
+			 */
+			var result=5&&6;
+			console.log(typeof result)
+			console.log(result)
+			result=0&&9
+			console.log(typeof result)
+			console.log(result)
+			result=""||"hello"
+			console.log(typeof result)
+			console.log(result)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

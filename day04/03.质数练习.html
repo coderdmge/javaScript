@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			while(true){
+				var num=prompt("请输入一个大于1的整数")
+			if(num<=1||isNaN(num)){
+				alert("输入不合法，请重新输入")
+			}
+			else{
+				var falg=true;
+				for (var i=2;i<num;i++) {
+					if(num%i==0){
+						alert("不是质数");
+						falg=false;
+						break;
+					}
+				}
+				if(falg){
+					alert("是质数");
+					break;
+				}
+				break;
+			}
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

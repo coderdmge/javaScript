@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var num1=+prompt("请输入一个整数")
+			var num2=+prompt("请输入一个整数")
+			var num3=+prompt("请输入一个整数")
+			if(num1<num2&&num1<num3){
+				if(num2<num3){
+					alert(num1+","+num2+","+num3)
+				}
+				else{
+					alert(num1+","+num3+","+num2)
+				}
+				
+			}else if(num2<num1&&num2<num3){
+				if(num1<num3){
+					alert(num2+","+num1+","+num3)
+				}
+				else{
+					alert(num2+","+num3+","+num1)
+				}
+			}else{
+				if(num1<num2){
+					alert(num3+","+num1+","+num2)
+				}
+				else{
+					alert(num3+","+num2+","+num1)
+				}
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

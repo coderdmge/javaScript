@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 我们可以在事件对应的属性中设置js代码
+			 * 这样事件被触发时，这些代码将会执行
+			 */
+		</script>
+	</head>
+	<body>
+		<!--<button id="btn" onclick="alert('点我干嘛')">我是一个按钮</button>-->
+		<button id="btn">我是一个按钮</button>
+		<script type="text/javascript">
+			var btn=document.getElementById("btn")
+			btn.ondblclick=function(){
+				alert("你还点")
+			}
+		</script>
+	</body>
+</html>

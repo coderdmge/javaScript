@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="script.js">
+		</script>
+		<script type="text/javascript">
+			alert("我是js内部的代码")
+		</script>
+	</head>
+	<body>
+		<!--
+			可以将代码编写到标签的onclick属性中
+			当我们点击按钮时，js代码才会执行
+			虽然可以写在标签的属性中，但他们属于结构与行为的耦合，不方便维护，不推荐使用
+		-->
+		<button onclick="alert('点我干嘛')">点我</button>
+		<!--
+			可以将js代码写在超链接href属性中，这样点超链接时，会执行js代码
+			
+		-->
+		<a href="javascript: alert('hello')">你也点我一下</a>
+		<a href="javascript:;">你在点我</a>
+		
+	</body>
+</html>

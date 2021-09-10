@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 如果直接使用构造函数创建一个Date对象，则会封装为当前代码执行的时间
+			 * 创建一个指定的时间对象
+			 * 需要在构造函数中传递一个表示时间的字符串作为参数
+			 * 日期格式  月份/日/年  时:分:秒
+			 */
+			var d=new Date()
+//			console.log(d)
+//			var d2=new Date("5/6/2018 11:34:45")
+//			console.log(d2)
+			//getDate()获取当前日期对象是几日
+			var date= d.getDate()
+			console.log(date)
+			/*
+			 * getDay()
+			 * 获取当前日期对象是周几
+			 * 会返回一个0-6的值
+			 * 0表示周日
+			 * 1表示周一
+			 */
+			var day=d.getDay()
+			console.log(day)
+			/*
+			 * getMonth()
+			 * 获取当前时间对象的月份
+			 * 会返回一个0-11的值
+			 * 0表示一月
+			 * 1表示2月
+			 * 11表示12月
+			 */
+			var month=d.getMonth()
+			console.log(month)
+			/*
+			 * getFullYear()
+			 * 获取当前日期对象的年份
+			 */
+			var year=d.getFullYear()
+			console.log(year)
+			var hours=d.getHours()
+			console.log(hours)
+			var minutes=d.getMinutes()
+			console.log(minutes)
+			var second=d.getSeconds()
+			console.log(second)
+			/*
+			 * getTime()
+			 * 获取当前日期对象的时间戳
+			 * 时间戳，指的是从格林威治标准时间的1970年1月1日，0时0分0秒
+			 * 	到当前日期所花费的毫秒数
+			 * 计算机底层保存时间使用的都是时间戳
+			 */
+			var time=d.getTime()
+			var d3=new Date("1/1/1970 0:0:0")
+			var time1=d3.getTime()
+			console.log(time1)
+			console.log(28800000/1000/3600)
+		</script>
+	</head>
+	
+	<body>
+	</body>
+</html>

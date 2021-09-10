@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 函数作用域
+			 * --调用函数创建函数作用域，函数执行完毕以后，函数作用域销毁
+			 * --每调用一次函数就会创建 一个新的函数作用域，他们之间互相独立
+			 * --在函数作用域可以访问到全局作用域的变量
+			 * 		全局作用域无法访问到函数作用域的变量
+			 * --当函数作用域操作一个变量时，它会先在自身作用域中寻找，如果有就直接使用
+			 * 		如果没有就向上一级作用域寻找，直到找到全局作用域
+			 * 		如果在全局作用域依然没有找到，则会报错
+			 * --在函数作用域要访问全局变量可以使用window对象
+			 */
+			/*
+			 * 在函数作用域也有声明提前的特征，
+			 * 使用var关键字声明的变量，会在函数执行代码之前被声明
+			 * 函数声明也会在函数中所有代码执行之前执行
+			 */
+			/*function fun1(){
+				fun2()
+				console.log(a)
+				var a=20;
+				function fun2(){
+					alert("我是fun2")
+				}
+			}
+			fun1()*/
+			//在函数中，不使用var声明的变量都会成为全局变量
+		/*	var c=78;
+			function fun3(){
+				c=10
+				console.log(c);
+			}
+			console.log(c)
+			fun3();*/
+			/*d=45;
+			function fun4(){
+				console.log(d)
+				d=90;
+			}
+			fun4()*/
+			//定义形参就相当于在函数作用域声明了变量
+			function fun5(e){
+				alert(e)
+			}
+			fun5()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

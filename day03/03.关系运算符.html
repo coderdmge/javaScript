@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 通过关系运算符可以比较 两个值之间的关系，
+			 * 如果关系成立，返回true，如果关系不成立则返回false
+			 * 非数值的情况
+			 * --对于非数值进行比较时，会将其转换位数字然后在比较
+			 * --如果符号两侧的值都是字符串，不会将其转换为数字进行比较
+			 * 		而会分别比较字符串的Unicode编码
+			 *
+			 * */
+			console.log(10>null)
+			console.log(10>"hello")
+			//任何值和NaN做任何比较都是false
+			//比较两个字符串时，比较的是字符串的编码，如果两位一样，则比较下一位
+			console.log("a">"b")
+			console.log("22222"<+"9")
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

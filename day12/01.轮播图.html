@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+			}
+			.outer{
+				width:520px ;
+				height: 333px;
+				background-color: greenyellow;
+				padding: 10px 0;
+				margin: 50px auto;
+				overflow: hidden;
+				position: relative;
+			}
+			#imglist{
+				position: absolute;
+			}
+			#imglist li{
+				float: left;
+				margin: 0 10px;
+			}
+			#pointer{
+				position: absolute;
+				bottom: 20px;
+				
+			}
+			#pointer a{
+				float: left;
+				width: 16px;
+				height: 16px;
+				background-color: rgba(255,0,0,.4);
+				margin: 0 6px;
+			}
+			#pointer a:hover{
+				background-color: rgba(0,0,0,.6);
+			}
+		</style>
+		<script type="text/javascript" src="tools.js">
+		</script>
+		<script type="text/javascript">
+			window.onload=function(){
+				var imglist=document.getElementById("imglist")
+				var imgs=document.getElementsByTagName("img")
+				imglist.style.width=imgs.length*520+"px"
+				var pointer=document.getElementById("pointer")
+				var parent=pointer.parentNode
+				pointer.style.left=(parent.offsetWidth-pointer.offsetWidth)/2+"px";
+				var index=0
+				var allA=pointer.children;
+				allA[index].style.backgroundColor="rgba(0,0,0,.6)"
+				for(var i=0;i<allA.length;i++){
+					allA[i].num=i
+					allA[i].onclick=function(){
+						clearInterval(timer)
+						index=this.num
+						move(imglist,50,-520*index, "left",function(){
+							autochange()
+						})
+						setColor()
+					}
+				}
+				autochange()
+				function setColor(){
+					if(index>=imgs.length-1){
+						index=0
+						imglist.style.left=0
+					}
+					for (var i=0;i<allA.length;i++) {
+						allA[i].style.backgroundColor=""
+					}
+					allA[index].style.backgroundColor="rgba(0,0,0,.6)"
+				}
+				var timer;
+				function autochange(){
+				 timer=	setInterval(function(){
+						index++
+						index%=imgs.length
+						move(imglist,30,-520*index,"left",function(){
+							setColor()
+						})
+					},1000)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="outer">
+			<ul id="imglist">
+				<li><img src="img/1.jpg" alt="" /></li>
+				<li><img src="img/2.jpg" alt="" /></li>
+				<li><img src="img/3.jpg" alt="" /></li>
+				<li><img src="img/4.jpg" alt="" /></li>
+				<li><img src="img/5.jpg" alt="" /></li>
+				<li><img src="img/1.jpg" alt="" /></li>
+			</ul>
+			<div id="pointer">
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				
+			</div>
+		</div>
+	</body>
+</html>

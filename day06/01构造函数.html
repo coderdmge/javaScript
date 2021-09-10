@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 
+			 */
+			function Person(name,age,gender){
+				this.name=name;
+				this.age=age;
+				this.gender=gender;
+			}
+			Person.prototype.sayName=function (){
+					alert("我是"+this.name)
+				}
+			var per=new Person("swk",23,"m")
+			var per2=new Person("zbj",34,"m")
+			per.sayName()
+			per2.sayName()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

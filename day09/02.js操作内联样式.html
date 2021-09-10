@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById("box1")
+				var btn01=document.getElementById("btn01")
+				btn01.onclick=function(){
+					/*
+					 * 通过js修改元素的样式
+					 * 语法：
+					 * 元素.style.样式名=样式值
+					 * 如果css样式含有- 比如 background-color
+					 * 需要将这种样式修改为驼峰命名法
+					 * 去掉-，然后将-后的字母大写
+					 * 我们通过style属性设置的都是内联样式
+					 */
+					box1.style.width="300px"
+					box1.style.height="300px"
+					box1.style.backgroundColor="yellow"
+				}
+				var btn02=document.getElementById("btn02")
+				btn02.onclick=function(){
+					alert(box1.style.height)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn01">点我一下</button>
+		<button id="btn02">点我一下2</button>
+		
+		<br /><br />
+		
+		<div id="box1"></div>
+	</body>
+</html>

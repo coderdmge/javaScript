@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var sum=0;
+			for (var i = 1; i <=100 ; i++) {
+				if(i%2!=0){
+					sum+=i;
+				}
+			}
+			console.log(sum)
+		</script>
+		<script type="text/javascript">
+			var sum=0;
+			var count=0;
+			for (var i=1; i<=100;i++) {
+				if(i%7==0){
+					sum+=i;
+					count++;
+				}
+			}
+			console.log("个数为"+count)
+			console.log("总和为"+sum)
+		</script>
+		<script type="text/javascript">
+				var count=0;
+			for (var i=100;i<1000;i++) {
+				var bai=parseInt(i/100) 
+				var shi= parseInt((i-bai*100)/10)
+				var ge=i%10;
+				if(bai*bai*bai+shi*shi*shi+ge*ge*ge==i){
+					console.log(i);
+					count++
+				}
+			}
+			console.log(count)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

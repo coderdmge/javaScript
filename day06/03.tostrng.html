@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person (name,age,gender){
+				this.name=name;
+				this.age=age;
+				this.gender=gender
+			}
+			Person.prototype.toString=function(){
+				return "Person[name="+this.name+", age="+this.age+","+"gender="+this.gender+"]"
+			}
+			var per=new Person("孙悟空",12,"男")
+			var per1=new Person("猪八戒",12,"男")
+			console.log(per)
+			console.log(per1)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

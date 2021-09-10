@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<style type="text/css">
+			.b1{
+				width: 100px;
+				height: 100px;
+				background-color: red;
+			}
+			
+			.b2{
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box=document.getElementById("box")
+				var btn01 = document.getElementById("btn01");
+				btn01.onclick=function(){
+					/* 修改box的样式
+					 * 通过style属性来修改元素的样式，没修改一个样式，浏览器就需要重新渲染一次页面
+					 * 这样的执行性能是比较差的，而且这种形式要修改多个样式时也不方便
+					 * 
+					 */
+//					box.style.height="300px"
+//					box.style.width="300px"
+//					box.style.backgroundColor="yellow"
+					/*
+					 * 我希望一行代码，可以同时修改多个样式
+					 * 修改box的class属性
+					 * 我们可以通过修改元素的class的属性来间接的修改样式
+					 * 这样一来我们只需要修改一次，就可以同时修改多个样式
+					 * 浏览器只需要重新渲染页面一次，性能比较好
+					 * 并且这种方法表现和行为进一步的分离
+					 * */
+//					box.className+=" b2"
+					
+				}
+			}
+			
+		</script>
+	<body>
+		<button id="btn01">点击按钮以后修改box的样式</button>
+		<br /><br />
+		<div id="box" class="b1"></div>
+	</body>
+</html>

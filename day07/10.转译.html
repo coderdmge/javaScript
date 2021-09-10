@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 检查一个字符串是否含有.
+			 * .表示任意字符
+			 */
+			var reg=/\./
+			reg=new RegExp("\\.")
+			console.log(reg)
+			console.log(reg.test("qwr."))
+			/*
+			 * \w
+			 * 任意字母、数字、 _[A-z0-9_]
+			 * \W
+			 * 除了字母、数字、_[^A-z0-9_]
+			 * \d
+			 * 任意的数字
+			 * \D
+			 * 除了数字
+			 * \s
+			 * 空格
+			 * \S
+			 * 除了空格
+			 * \b
+			 * 单词边界
+			 * \B
+			 * 除了单词边界
+			 */
+			reg=/\W/
+			reg=/\D/
+			reg=/\s/
+			reg=/\S/
+			console.log(reg.test(" T "))
+			/*
+			 * 创建一个正则表达式检查一个字符串中是否含有单词child
+			 */
+			reg=/\bchild\b/
+			console.log(reg.test("hello child ren"))
+			var str="    hel   lo     "
+			str=str.replace(/^\s*|\s*$/g,"")
+			console.log(str)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

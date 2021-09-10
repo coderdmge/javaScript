@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 使用字面量创建正则表达式
+			 * 语法： var 变量=/正则表达式/匹配模式
+			 * */
+			var reg=/a|b|c/
+			console.log(reg.test("bf"))
+			/*
+			 * []里的内容也是或的关系
+			 * [ab]==a|b
+			 * [a-z]任意小写字母
+			 * [A-Z]任意大写的字母
+			 * [A-z]任意字母
+			 * [0-9]任意数字
+			 */
+			reg=/a[bde]c/
+			console.log(reg.test("aec"))
+			reg=/[0-9]/
+			console.log(reg.test("1232w22"))
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

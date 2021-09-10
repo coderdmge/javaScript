@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 
+			 */
+			function createPerson(name,age,gender){
+				var obj=new Object()
+				obj.name=name;
+				obj.age=age;
+				obj.gender=gender;
+				obj.sayName=function(){
+					alert(this.name)
+				}
+				return obj;
+			}
+			function createDog(name,age){
+				var obj=new Object()
+				obj.name=name
+				obj.age=age
+				obj.sayhello=function(){
+					alert(this.name)
+					
+				}
+				return obj;
+			}
+			var obj=createPerson("tom",24,"man")
+			var obj1=createPerson("jack",14,"man")
+			var obj2=createPerson("marry",34,"man")
+			console.log(obj)
+//			obj2.sayName()
+			var obj3=createDog("wa",12)
+//			obj3.sayhello()
+			console.log(obj3)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

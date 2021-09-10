@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * forEach()方法需要一个函数作为参数
+			 * 像这种函数由我们创建但不是我们调用的，我们称为回调函数
+			 * 数组有几个元素函数就会执行几次，每次执行时，浏览器都会将遍历到的元素以实参的形式传递进来，
+			 * 我们可以定义形参，来读取这些内容
+			 * 浏览器会在回调函数中传递三个参数
+			 * 第一个参数，就是当前正在遍历的元素
+			 * 第二个参数，就是当前正在遍历元素的索引
+			 * 第三个参数，就是正在遍历的数组
+			 */
+			var arr=["孙悟空","猪八戒","沙和尚","唐僧","白骨精"]
+			arr.forEach(
+				function(value,index,arr){
+					console.log(value)
+					console.log(index)
+					console.log(arr)
+				}
+			)
+			</script>
+	</head>
+	<body>
+	</body>
+</html>

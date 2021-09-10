@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1{
+				width: 100px;
+				height: 100px;
+				background-color: yellow;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload=function(){
+				var box1=document.getElementById("box1")
+				var btn01=document.getElementById("btn01")
+				btn01.onclick=function(){
+					/*
+					 * 获取元素当前的样式
+					 * 语法： 样式.currentStyle.样式名
+					 * 他可以用来读取当前元素正在显示的样式
+					 * 如果当前元素没有设置该样式，则获取它的默认值
+					 * currentStyle只有IE支持
+					 */
+//					alert(box1.currentStyle.width)
+					/*
+					 * 在其他浏览器可以使用
+					 * getComputedStyle()这个方法来获取当前元素的样式
+					 * 这个方法是window的方法，可以直接使用
+					 * 需要两个参数
+					 * 第一个：要获取样式的元素
+					 * 第二个：可以传递一个伪元素，一般都是null
+					 * 该方法会返回一个对象，对象封装了当前元素的样式
+					 * 该方法ie8及以下不支持
+					 * 通过currentSthle和getComputedStyle读取到样式都是只读的
+					 * 不能修改，如果要修改必须通过style属性
+					 * 
+					 */
+					var w=getStyle(box1,"width")
+					alert(w)
+					
+				}
+			}
+			function getStyle(obj,name){
+				return window.getComputedStyle? getComputedStyle(obj,null)[name]:obj.currentStyle[name]
+			}
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn01">点我一下</button>
+		<br /><br />
+		<div id="box1" ></div>
+	</body>
+</html>

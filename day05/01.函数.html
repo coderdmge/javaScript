@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 * 函数function
+			 * 函数也是一个对象
+			 * 函数中可以封装一些功能，在需要时可以执行这些功能
+			 * 函数中可以保存一些代码在需要的时候调用
+			 * 使用typeof检查一个函数对象时，会返回function
+			 */
+//			var fun= new Function("alert('hello')")
+//			fun()
+			/*
+			 * 封装到函数中的代码不会立即执行
+			 * 函数中的代码会在函数调用的时候执行
+			 * 调用函数 语法 ：函数对象()
+			 * 当调用函数时，函数封装的代码会照顺序执行
+			 */
+			function fun(){
+				alert("hello")
+				
+			}
+			var fun3=function () {
+				console.log("我是匿名函数")
+			}
+			fun3()
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
